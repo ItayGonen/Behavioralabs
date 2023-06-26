@@ -1,5 +1,5 @@
 const colorPallete = {
-    primaryColor: ,
+    primaryColor: '#176B87',
     secondryColor: ,
     thirdColor: ,
 }
