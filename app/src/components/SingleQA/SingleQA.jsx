@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './SingleQA.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { globalStyles } from '../../styles';
 
 const SingleQA = (props) => {
 
@@ -18,17 +19,17 @@ const SingleQA = (props) => {
             selectedAnswerElement.style.height = '0px';
             selectedPara.classList.remove("ani")
             selecedDiv.style.paddingBottom = "0px";
-            selectedTitle.classList.remove("selected")
+            selectedTitle.style.removeProperty("color");
+            selectedTitle.style.removeProperty("transition");
             setShowAnswer(false)
         } else {
             selectedAnswerElement.style.height = '100%';
             selectedPara.classList.add("ani")
             selecedDiv.style.paddingBottom = "30px";
-            selectedTitle.classList.add("selected")
+            selectedTitle.style.transition = "color 1s";
+            selectedTitle.style.color = globalStyles.HoverFaqQuestions
             setShowAnswer(true)
         }
-        
-        // console.log(selectedAnswerElement)
     }
 
   return (

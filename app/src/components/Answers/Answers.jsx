@@ -43,7 +43,7 @@ import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import CircularProgressBar from '../CircularProgressBar/CircularProgressBar';
 import { FaxSharp, TrySharp } from '@mui/icons-material';
-import { globalTexts } from '../../styles';
+import { globalStyles, globalTexts } from '../../styles';
 
 
 const style = {
@@ -80,7 +80,7 @@ const Answers = (props) => {
         console.log(allQuestions)
         const calculate = () => {
             let s = 0
-            allQuestions.map((question) => {
+            allQuestions?.map((question) => {
                 s += question.selected
             })
             dispatch(setResult(s))
@@ -92,40 +92,22 @@ const Answers = (props) => {
     <>
     <div className='results-container'>
         <div className='pre-reports'>
-            <h1 style={{ color: 'black', width: '80%', textAlign: 'center' }}> Find Out  <span style={{ fontWeight: '1000', color: "#5c18bf" }}> WHO YOU ARE! </span></h1>
-            <p>Congratulations! You have made the first step into self imporvment.  <br /> Learn more about yourself and find out how your personality type affects your everyday life and challenges</p>
+            <h1 style={{ color: 'black', width: '80%', textAlign: 'center' }}> Find Out  <span style={{ fontWeight: '1000', color: globalStyles.ButtonsHeaderColor }}> WHO YOU ARE! </span></h1>
+            <p>Congratulations! You have made the first step into self imporvment.  </p>
         </div>
 
-          <div className='strength-weakness-advice'>
-             <div className='item-s-w-a'>
-                 <p>Discover Your Mental Strengths</p>
-                 <img src={strengthImg} />
-             </div>
-             <div className='item-s-w-a'>
-                 <p>Know Your Weaknesses</p>
-                 <img src={slideImg} />
-                 
-             </div>
-             <div className='item-s-w-a'>
-                 <p>Get Essentials Knowledge that Will Improve Yourself</p>
-                 <img src={thoughtImg} />
-             </div>
-         </div>
         <div className='pre-reports'>
-            <h1> Our Report </h1>
+            <h1> Our Reports </h1>
             <p> Our Personality report is based on well known psychological theory and will describe your personality based on the big 5 characteristics </p>
          </div>
 
          <div className='reports' id="basic-report">
             
-            <div className='report-item' id="master-report">
-            
+            <div className='report-item' id="master-report" style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}>
                 <div className='level'>
                     <p style={{ color: 'white' }}> Complete Personality Report </p>
-                    {/* <p className="level-report-desc"> Share With a Loved One </p> */}
                 </div>
                 <div className='price'>
-                    {/* <p style={{ textDecoration: 'line-through', fontSize: '1.3rem' }}> 24.99$ </p> */}
                     <p> 7.99$ </p>
                 </div>
                 <div className='lines'>
@@ -147,9 +129,41 @@ const Answers = (props) => {
                     <hr />
                 </div>
                 <a
-                    // href={`${globalTexts.LinkToPayment}`}
                     href="/final-result/123"
                     className="to-payment-button"
+                    style={{ color: globalStyles.ButtonsHeaderColor }}
+                > Get My Results </a>
+            </div>
+
+            <div className='report-item' id="master-report" style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}>
+                <div className='level'>
+                    <p style={{ color: 'white' }}> Advanced Personality Report </p>
+                </div>
+                <div className='price'>
+                    <p> 12.99$ </p>
+                </div>
+                <div className='lines'>
+                    <hr />
+                    <div className='feature-check-icon'>
+                        <p>Simplified personality ennagram</p>
+                        <FontAwesomeIcon icon={faCheck} />
+                    </div>
+                    <hr />
+                    <div className='feature-check-icon'>
+                        <p>Analayzed personality characters</p>
+                        <FontAwesomeIcon icon={faCheck} />
+                    </div>
+                    <hr />
+                    <div className='feature-check-icon'>
+                        <p>Essentials Tips to improve yourself</p>
+                        <FontAwesomeIcon icon={faCheck} />
+                    </div>
+                    <hr />
+                </div>
+                <a
+                    href="/final-result/123"
+                    className="to-payment-button"
+                    style={{ color: globalStyles.ButtonsHeaderColor }}
                 > Get My Results </a>
             </div>
 
@@ -157,7 +171,7 @@ const Answers = (props) => {
          </div>
 
 
-         <div className='middle-section'>
+         <div className='middle-section' style={{ padding: '40px', background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}>
             87% of people in this page has chosen to view their full report 
          </div>
             <Reviews />

@@ -47,7 +47,7 @@ const QuizGame = () => {
             </div>
             <div className='quiz-layout'>
                 <div className='step-title-div'>
-                    <p className={nextOne ? "p-opa" : ""} style={{ color: '#cbd8fb' }}> Step {globalTexts.StepsBeforeStart[current].id} </p>
+                    <p className={nextOne ? "p-opa" : ""} style={{ color: globalStyles.textColorsHomePage }}> Step {globalTexts.StepsBeforeStart[current].id} </p>
                     <h1 className={nextOne ? "p-opa" : ""}>{globalTexts.StepsBeforeStart[current].title}</h1>
                 </div>
                 <p className={nextOne ? "p-opa" : ""} id="para" style={{ color: '#e9effb' }}>{globalTexts.StepsBeforeStart[current].para}</p>

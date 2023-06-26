@@ -1,14 +1,12 @@
 .results-container {
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* height: 100vh; */
     width: 100vw;
     position: relative;
     background-color: rgb(251, 240, 240);
-    /* background: rgb(92,24,191);
-    background: linear-gradient(90deg, rgba(92,24,191,1) 0%, rgba(172,140,219,1) 100%, rgba(250,249,246,1) 100%); */
 }
 
 .answers {
@@ -16,7 +14,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* height: 100vh; */
     width: 100vw;
     position: relative;
     background: rgb(92,24,191);
@@ -121,12 +118,12 @@
     color: white;
 }
 
-.get-your-full-report {
+.get-your-full-reports {
     display: flex;
     flex-direction: column;
 }
 
-.get-your-full-report p {
+.get-your-full-reports p {
     font-size: 1.4rem;
 }
 

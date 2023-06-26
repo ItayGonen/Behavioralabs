@@ -7,6 +7,7 @@ import firstImg from '../../assets/1.jpeg';
 import secondImg from '../../assets/2.jpeg';
 import thirdImg from '../../assets/3.jpeg';
 import fourthImg from '../../assets/4.jpeg';
+import { globalStyles } from '../../styles';
 
 const Reviews = () => {
   return (
@@ -24,11 +25,11 @@ const Reviews = () => {
                         <h1>Tracy and John</h1> 
                         <p>57 minutes ago</p>
                         <div className='stars'>
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
                         </div>
                     </div>
                 </div>
@@ -49,11 +50,11 @@ const Reviews = () => {
                         <h1>Viki</h1> 
                         <p>3 days ago</p>
                         <div className='stars'>
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
                         </div>
                     </div>
                 </div>
@@ -72,11 +73,11 @@ const Reviews = () => {
                         <h1>Dan</h1> 
                         <p>6 days ago</p>
                         <div className='stars'>
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
-                            <FontAwesomeIcon icon={faStar} className="single-review-star" />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
+                            <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
                         </div>
                     </div>
                 </div>

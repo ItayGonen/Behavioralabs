@@ -1,22 +1,40 @@
 const colorPallete = {
-    primaryColor: '#176B87',
-    secondryColor: ,
-    thirdColor: ,
+    textColor: '#79E0EE',
+    textColorsHomePage: '#8795a1',
+    backgroundColors: '#D0F5BE', 
+    gradientSecondryBackgroundColor: '#98EECC',
+    gradientThirdBackgroundColor: '#E1AEFF', 
 }
 
-export const globalStyles = {
-    LabsColorInLogo: '#176B87',
-    ButtonsHeaderColor: '#176B87',
-    BallsColor: 'green',
-    CountersColor: '#176B87',
-    NavBarBackgroundColor: '#DAFFFB',
-    HeaderBackgroundColor: '#DAFFFB',
-    TextTagsInHomePage: '#8795a1',
-    StepsBeforeBackgroundColor: {first: '#001C30', second: '#64CCC5', third: '#176B87'},
-    LoadingBeforeQuiz: {first: '#001C30', second: '#64CCC5', third: '#176B87'},
+export const globalStyles = { 
+    LabsColorInLogo: colorPallete.textColor,
+    ButtonsHeaderColor: colorPallete.textColor,
+    BallsColor: colorPallete.textColor,
+    CountersColor: colorPallete.textColor,
+    NavBarBackgroundColor: colorPallete.backgroundColors,
+    HeaderBackgroundColor: colorPallete.backgroundColors,
+    MainTitleInTheHeader: colorPallete.textColor,
+    TextTagsInHomePage: colorPallete.textColorsHomePage,
+    StepsBeforeBackgroundColor: {
+        first: colorPallete.gradientThirdBackgroundColor,
+        second: colorPallete.gradientSecondryBackgroundColor,
+        third: colorPallete.textColor
+    }, 
+    LoadingBeforeQuiz: {
+        first: colorPallete.gradientThirdBackgroundColor,
+        second: colorPallete.gradientSecondryBackgroundColor,
+        third: colorPallete.textColor
+    }, 
     ProgressBarColor: 'grey',
-    ChapterColors: '#176B87',
-    QuizBackgroundAbobeScreen: {first: '#001C30', second: '#64CCC5'},
+    ChapterColors: colorPallete.textColor,
+    QuizBackgroundAbobeScreen: {
+        first: colorPallete.gradientThirdBackgroundColor,
+        second: colorPallete.gradientSecondryBackgroundColor,
+    },
+    FaqBackgroundColor: colorPallete.backgroundColors, 
+    HoverFaqQuestions: colorPallete.textColor,
+    StarsColor: colorPallete.textColor,
+    TermsOfServicesBackgroundColor: colorPallete.backgroundColors
 }
 
 
@@ -105,7 +123,8 @@ export const globalTexts = {
             para: "Yoav Gonen Yoav Gonen Yoav Gonen "
         }
     ],
-    LinkToPayment: "https://store.payproglobal.com/checkout?products[1][id]=85055&page-template=17206&use-test-mode=true&secret-key=!yqRsYG0-0" 
+    LinkToPayment: "https://store.payproglobal.com/checkout?products[1][id]=85055&page-template=17206&use-test-mode=true&secret-key=!yqRsYG0-0" ,
+    domain: "http://sleep.behavioralabs.com"
 }
 
 

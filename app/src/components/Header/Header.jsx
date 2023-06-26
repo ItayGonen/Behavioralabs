@@ -43,7 +43,7 @@ const Header = () => {
     <div className='header-div' style={{ backgroundColor: globalStyles.HeaderBackgroundColor }}>
         <div className='text-header-div'>
             <h1>{ globalTexts.MainTitleInTheHeader }</h1>
-            <p style={{ color: globalStyles.TextTagsInHomePage }}>{globalTexts.se}</p>
+            <p style={{ color: globalStyles.TextTagsInHomePage }}>{globalTexts.SecondryTitleInTheHeader}</p>
             <button className='start-the-test-button' style={{ backgroundColor: globalStyles.ButtonsHeaderColor }} onClick={changeToQuizLocation}> Start The Test</button>
         </div>
 

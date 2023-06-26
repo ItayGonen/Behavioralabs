@@ -2,12 +2,13 @@ import React, { Fragment } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import './TermsAndConditions.css';
 import Footer from '../../components/Footer/Footer';
+import { globalTexts, globalStyles } from '../../styles';
 
 const TermsAndConditions = () => {
   return (
     <>
     <Fragment>
-      <div style={{ backgroundColor: 'rgb(251, 240, 240)' }}>
+      <div style={{ backgroundColor: globalStyles.TermsOfServicesBackgroundColor }}>
         <Navbar />
         <div className='terms-and-conditions-container'>
             <h1> TERMS OF SERVICE </h1>
@@ -15,7 +16,7 @@ const TermsAndConditions = () => {
                 <div className='terms-item'>
                     <h4>1. AGREEMENT TO TERMS</h4>
 
-                     These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and d.o Aviv Digital ("Company", “we”, “us”, or “our”), concerning your access to and use of the <a href="http://www.behavioralabs.com">http://www.behavioralabs.com</a> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). We are registered in Israel and have our registered office at Tzoran, __________. Our VAT number is 516061090. You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY. <br/> <br/>
+                     These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and d.o Aviv Digital ("Company", “we”, “us”, or “our”), concerning your access to and use of the <a href={ globalTexts.domain }>{ globalTexts.domain } </a> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). We are registered in Israel and have our registered office at Tzoran, __________. Our VAT number is 516061090. You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY. <br/> <br/>
 
                      Supplemental terms and conditions or documents that may be posted on the Site from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Terms of Use from time to time. We will alert you about any changes by updating the “Last updated” date of these Terms of Use, and you waive any right to receive specific notice of each such change. Please ensure that you check the applicable Terms every time you use our Site so that you understand which Terms apply. You will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Terms of Use by your continued use of the Site after the date such revised Terms of Use are posted. <br /> <br />
 
