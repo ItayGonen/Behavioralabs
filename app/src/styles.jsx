@@ -1,3 +1,9 @@
+const colorPallete = {
+    primaryColor: ,
+    secondryColor: ,
+    thirdColor: ,
+}
+
 export const globalStyles = {
     LabsColorInLogo: '#176B87',
     ButtonsHeaderColor: '#176B87',
