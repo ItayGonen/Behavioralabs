@@ -2,8 +2,8 @@ import React from 'react';
 import './Second.css';
 import Lottie from 'react-lottie';
 import thinkingLottie from '../../lotties/thinking.json'
-import jumpLottie from '../../lotties/jump.json';
-import paperLottie from '../../lotties/paper.json';
+import jumpLottie from '../../lotties/switch.json';
+import paperLottie from '../../lotties/moon.json';
 import { globalStyles, globalTexts } from '../../styles';
 
 const Second = () => {
@@ -52,7 +52,6 @@ const Second = () => {
                 { globalTexts.AnimationsSection[1].secondry }
                 </p>
             </div>
-
         </div>
     </div>
   )

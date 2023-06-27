@@ -92,13 +92,13 @@ const Answers = (props) => {
     <>
     <div className='results-container'>
         <div className='pre-reports'>
-            <h1 style={{ color: 'black', width: '80%', textAlign: 'center' }}> Find Out  <span style={{ fontWeight: '1000', color: globalStyles.ButtonsHeaderColor }}> WHO YOU ARE! </span></h1>
-            <p>Congratulations! You have made the first step into self imporvment.  </p>
+            <h1 style={{ color: 'black', width: '80%', textAlign: 'center' }}> { globalTexts.FirstTitlePrePaymentPage }  <span style={{ fontWeight: '1000', color: globalStyles.ButtonsHeaderColor }}> {globalTexts.BoldTitlePrePaymentPage} </span></h1>
+            <p>{globalTexts.DescriptionToResultsTitle} </p>
         </div>
 
         <div className='pre-reports'>
             <h1> Our Reports </h1>
-            <p> Our Personality report is based on well known psychological theory and will describe your personality based on the big 5 characteristics </p>
+            <p> {globalTexts.DescriptionToTheOurReportsTitle} </p>
          </div>
 
          <div className='reports' id="basic-report">
@@ -108,25 +108,24 @@ const Answers = (props) => {
                     <p style={{ color: 'white' }}> Complete Personality Report </p>
                 </div>
                 <div className='price'>
-                    <p> 7.99$ </p>
+                    <p> {globalTexts.FirstReportPrice} </p>
                 </div>
                 <div className='lines'>
                     <hr />
                     <div className='feature-check-icon'>
-                        <p>Simplified personality ennagram</p>
+                        <p>{globalTexts.FirstReportFeatures[0]}</p>
                         <FontAwesomeIcon icon={faCheck} />
                     </div>
                     <hr />
                     <div className='feature-check-icon'>
-                        <p>Analayzed personality characters</p>
+                        <p>{globalTexts.FirstReportFeatures[1]}</p>
                         <FontAwesomeIcon icon={faCheck} />
                     </div>
                     <hr />
-                    <div className='feature-check-icon'>
+                    {/* <div className='feature-check-icon'>
                         <p>Essentials Tips to improve yourself</p>
                         <FontAwesomeIcon icon={faCheck} />
-                    </div>
-                    <hr />
+                    </div> */}
                 </div>
                 <a
                     href="/final-result/123"
@@ -140,22 +139,22 @@ const Answers = (props) => {
                     <p style={{ color: 'white' }}> Advanced Personality Report </p>
                 </div>
                 <div className='price'>
-                    <p> 12.99$ </p>
+                    <p> {globalTexts.SecondReportPrice} </p>
                 </div>
                 <div className='lines'>
                     <hr />
                     <div className='feature-check-icon'>
-                        <p>Simplified personality ennagram</p>
+                        <p>{globalTexts.SecondReportFeatures[0]}</p>
                         <FontAwesomeIcon icon={faCheck} />
                     </div>
                     <hr />
                     <div className='feature-check-icon'>
-                        <p>Analayzed personality characters</p>
+                        <p>{globalTexts.SecondReportFeatures[1]}</p>
                         <FontAwesomeIcon icon={faCheck} />
                     </div>
                     <hr />
                     <div className='feature-check-icon'>
-                        <p>Essentials Tips to improve yourself</p>
+                        <p>{globalTexts.SecondReportFeatures[2]}</p>
                         <FontAwesomeIcon icon={faCheck} />
                     </div>
                     <hr />
@@ -172,7 +171,7 @@ const Answers = (props) => {
 
 
          <div className='middle-section' style={{ padding: '40px', background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}>
-            87% of people in this page has chosen to view their full report 
+            {globalTexts.PercentagesOfPeopleDecidedToViewTheirFullReport}
          </div>
             <Reviews />
         </div>

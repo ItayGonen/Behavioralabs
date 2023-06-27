@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
 import Lottie from 'react-lottie';
-import animationData from '../../lotties/sleeping.json';
+import animationData from '../../lotties/sleeping2.json';
 import { globalStyles, globalTexts } from '../../styles';
 
 const Header = () => {
@@ -50,8 +50,8 @@ const Header = () => {
         <Lottie 
 	        options={defaultOptions}
             className="lottie-icon-1"
-            width={width < 768 ? 300 : 700}
-            height={width < 768 ? 250 : 600}
+            width={width < 768 ? 300 : 500}
+            height={width < 768 ? 285 : 400}
         />
 
     </div>

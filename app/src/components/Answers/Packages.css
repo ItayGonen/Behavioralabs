@@ -20,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     padding: 70px 20px;
+    height: 700px;
 }
 
 .report-item .level {
@@ -88,9 +89,14 @@
     font-size: 17.5px;
     font-weight: bold;
     text-decoration: none;
+    /* justify-self: flex-end; */
     /* box-shadow: 5px 1px 10px #b9b3b3;  */
     cursor: pointer;
-    /* align-self: center; */
+    /* align-self: flex-end; */
+    position: absolute;
+    bottom: 40px;
+    width: 80%;
+    margin: 50px 55px 0px 55px;
     margin-top: 50px; 
 }
 

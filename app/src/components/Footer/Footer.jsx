@@ -1,11 +1,14 @@
 import React from 'react';
 import { globalStyles } from '../../styles';
 import './Footer.css';
+import logoSvgImg from '../../assets/sleep_logo_for_footer.svg';
 
 const Footer = () => {
   return (
     <div className='footer-container'>
-        <div className='footer-logo'> Behaviora<span style={{ color: globalStyles.LabsColorInLogo }}>Labs</span> </div>
+        <div className='footer-logo'> 
+          <img src={logoSvgImg} style={{ width: '100%' }} />
+        </div>
         <div className='footer-items'> 
             <a href="/terms-conditions">Terms Of Services</a>
             <a href="/privacy-policy">Privacy Policy</a>

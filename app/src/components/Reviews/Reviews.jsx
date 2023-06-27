@@ -7,7 +7,7 @@ import firstImg from '../../assets/1.jpeg';
 import secondImg from '../../assets/2.jpeg';
 import thirdImg from '../../assets/3.jpeg';
 import fourthImg from '../../assets/4.jpeg';
-import { globalStyles } from '../../styles';
+import { globalStyles, globalTexts } from '../../styles';
 
 const Reviews = () => {
   return (
@@ -22,8 +22,8 @@ const Reviews = () => {
                 <div className='profile'>
                     <img src={secondImg} style={{ borderRadius: '50%', width: '50px', height: '50px', objectFit: 'unset' }} />
                     <div className='details'>
-                        <h1>Tracy and John</h1> 
-                        <p>57 minutes ago</p>
+                        <h1>{globalTexts.FirstQuoteName}</h1> 
+                        <p>{globalTexts.FirstQuoteTakenTime}</p>
                         <div className='stars'>
                             <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
                             <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
@@ -38,7 +38,7 @@ const Reviews = () => {
                 
                 <div className='review-text'>
                     <p>
-                    "Me and my husband toke the test, we didn't saw it coming"
+                    {globalTexts.FirstQuote}
                     </p>
                 </div>
             </div>
@@ -47,8 +47,8 @@ const Reviews = () => {
                 <div className='profile'>
                     <img src={firstImg} style={{ borderRadius: '50%', width: '50px', height: '50px', objectFit: 'unset' }} />
                     <div className='details'>
-                        <h1>Viki</h1> 
-                        <p>3 days ago</p>
+                        <h1>{globalTexts.SecondQuoteName}</h1> 
+                        <p>{globalTexts.SecondQuoteTakenTime}</p>
                         <div className='stars'>
                             <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
                             <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
@@ -61,7 +61,7 @@ const Reviews = () => {
 
                 <div className='review-text'>
                     <p>
-                    "Knowing yourself is the best way to prepare for a life changing event, I needed that!"
+                    {globalTexts.SecondQuote}
                     </p>
                 </div>
             </div>
@@ -70,8 +70,8 @@ const Reviews = () => {
                 <div className='profile'>
                     <img src={fourthImg} style={{ borderRadius: '50%', width: '50px', height: '50px', objectFit: 'revert' }} />
                     <div className='details'>
-                        <h1>Dan</h1> 
-                        <p>6 days ago</p>
+                        <h1>{globalTexts.ThirdQuoteName}</h1> 
+                        <p>{globalTexts.ThirdQuoteTakenTime}</p>
                         <div className='stars'>
                             <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
                             <FontAwesomeIcon icon={faStar} style={{ color: globalStyles.StarsColor }} />
@@ -83,7 +83,7 @@ const Reviews = () => {
                 </div>
                 <div className='review-text'>
                     <p>
-                    "I was shocked to read the report, I learned a lot about myself, and everything make sense now"
+                    {globalTexts.ThirdQuote}
                     </p>
                 </div>
             </div>

@@ -6,6 +6,7 @@ import {
     Link
 } from "react-router-dom";
 import { globalStyles } from '../../styles';
+import logoSvgImg from '../../assets/final3.svg';
 
 const Navbar = () => {
 
@@ -15,14 +16,14 @@ const Navbar = () => {
     useEffect(() => {
         let navElement = document.getElementById("nav");
         let barsIconElement = document.getElementById("bars-icon")
-        let logoElement = document.getElementById("logo")
+        // let logoElement = document.getElementById("logo")
         window.addEventListener('scroll', (event) => {
             if (window.scrollY > 0){
                 navElement.classList.add("shadow")
-                logoElement.classList.add("res")
+                // logoElement.classList.add("res")
             } else {
                 navElement.classList.remove("shadow")
-                logoElement.classList.remove("res")
+                // logoElement.classList.remove("res")
             }
         })    
     }, [window])
@@ -36,8 +37,9 @@ const Navbar = () => {
   return (
     <nav id='nav' className='nav' style={{ backgroundColor: globalStyles.NavBarBackgroundColor }}>
         <div className='icon-div'>
-            <Link to="" id="logo" className='logo'> Behaviora<span style={{ color: globalStyles.LabsColorInLogo }}>Labs</span></Link> 
+            {/* <Link to="" id="logo" className='logo'> Behaviora<span style={{ color: globalStyles.LabsColorInLogo }}>Labs</span></Link>  */}
             {/* <img src={logoImage} className="logo-image" /> */}
+            <img src={logoSvgImg} style={{ width: '50%', height: '50px' }} />
             <FontAwesomeIcon 
                 icon={!responsive ?  faBars : faClose}
                 className='bars-icon'
