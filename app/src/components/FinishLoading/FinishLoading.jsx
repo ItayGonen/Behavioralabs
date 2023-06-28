@@ -11,7 +11,7 @@ import {
     Redirect 
   }
   from 'react-router-dom';
-import { globalStyles } from '../../styles';
+import { globalStyles, globalTexts } from '../../styles';
 
 const FinishLoading = (props) => {
 
@@ -56,7 +56,7 @@ const FinishLoading = (props) => {
         }
       };
 
-      const FinishLoadingSentences = ["Analayzing Your Personality...", "Processing Your Answers..."]
+      const FinishLoadingSentences = globalTexts.LoadingSentences;
 
 
   return (

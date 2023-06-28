@@ -9,350 +9,239 @@ import trophyImage from '../../assets/Five-Charac/trophy.png';
 import leadImage from '../../assets/Five-Charac/lead.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { globalStyles } from '../../styles';
+import starImg from '../../assets/star.png';
+import lampImg from '../../assets/lamp.png';
 
 const FiveCharacResults = () => {
 
-    const SubCategoryToAmountObject = useSelector(state => state.payment.subCategoryToAmountObjectRedux);
+    const result = useSelector(state => state.payment.result);
+
 
   return (
     <>
     <div className='characts'>
-
         <div className='chrarc'>
-            
-            {SubCategoryToAmountObject[4].value > 0 && SubCategoryToAmountObject[4].value < 50 ? 
-                
-                <div className='charac-div'> 
-                    <img src={advisorImage} />
-                    <h1>Openess</h1>
-                    <p> You are a down-to-earth person and prefer the known to the unknown. You are straightforward and practical. </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p> Dislike change </p>
-                        </div>
-                        <div className='arr-last'>
-                            <p> Prefer the old and familiar concepts </p> 
-                        </div>
-                        <div className='arr-last'>
-                            <p> Resists new ideas </p>
-                        </div>
-                        <div className='arr-last'>
-                            <p> Dislike abstract or theoretical concepts </p>
-                        </div>
+            {result > 0 && result < 35 ? // IN WHICH GROUP YOU ARE
+             <div className='charac-div' style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}> 
+                <img src={starImg} />
+                <h4>{Math.round((result / 135) * 100)} /  {100}</h4>
+                <h1>Poor Sleep Group</h1>
+                <p> Users in this group have poor sleep habits and experience significant sleep difficulties. They may struggle to fall asleep, experience frequent awakenings, have chronic daytime sleepiness, and generally feel unrested. </p> 
+                <div className='arrs'>
+                    <div className='arr-last'>
+                        <p> Lack a consistent sleep schedule, with irregular bedtimes and wake-up times. </p>
+                    </div>
+                    <div className='arr-last'>
+                        <p> Lack a structured bedtime routine that promotes relaxation and prepares the mind and body for sleep. </p> 
+                    </div>
+                    <div className='arr-last'>
+                        <p>Have an unfavorable sleep environment, which may include factors such as excessive noise, uncomfortable bedding, or inadequate darkness. </p>
+                    </div>
+                    <div className='arr-last'>
+                        <p> Exhibit poor sleep hygiene practices, such as engaging in stimulating activities or consuming sleep-disruptive substances close to bedtime. </p>
+                    </div>
+                    <div className='arr-last'>
+                        <p> Experience frequent and significant sleep disturbances, including difficulties falling asleep or staying asleep throughout the night. </p>
+                    </div>
+                    <div className='arr-last'>
+                        <p> Face chronic daytime sleepiness and fatigue, leading to impaired functioning and a reduced quality of life. </p>
                     </div>
                 </div>
-            :
+            </div>
+            : 
             <>
-                {SubCategoryToAmountObject[4].value > 50 && SubCategoryToAmountObject[4].value < 75 ?
-                    <div className='charac-div'> 
-                        <img src={advisorImage} />
-                        <h1>Openess</h1>
-                       <p>You are open to new experiences but also have a practical sense. You are creative and open-minded, while still have a clear grasp of reality.
-                          You will try out new things, but not impulsively, after you see the entire picture and can predict the end-result.
-                        </p>
+                {
+                    result > 35 && result < 70 ?
+                    <div className='charac-div' style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}> 
+                        <img src={starImg} />
+                        <h4>{Math.round((result / 135) * 100)} /  {100}</h4>
+                        <h1> Fair Sleep Group </h1>
+                        <p> Users in this group have fair sleep habits but may experience moderate sleep difficulties and disruptions. They may have occasional difficulty falling asleep, wake up during the night, or experience some daytime sleepiness. </p>
                         <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>Open to trying out new things</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Creative thinker</p>
-                        </div>
-                        <div className='arr-last'>
-                        <p>Happy to think about abstract concepts</p>
-                        </div>
-                    </div>
-                   </div>
-                   :
-                // Check if between 75-100
-                <div className='charac-div'>
-                    <img src={advisorImage} className="abs-image-o"/>
-                    <h1>Openess</h1>
-                    <p>
-                    You are creative and insightful; you also have a broad spectrum of interests. Curiosity leads your way, and you are keen on learning new things. You are open to new experiences and adventures by nature.
-                    Your openness to try out new things and new experiences could help you throughout the course of your life, but it could also put you in trouble.
-                    Explore the world and its possibilities but keep out of harm's way!
-                    </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p> Open to trying out new things </p>
-                        </div>
-                        <div className='arr-last'>
-                            <p> Very creative </p>
-                        </div>
-                        <div className='arr-last'>
-                            <p> Focused on tackling new challenges </p>
-                        </div>
-                        <div className='arr-last'>
-                            <p> Happy to think about abstract concepts </p>
+                            <div className='arr-last'>
+                                <p> Have an irregular sleep schedule with variations in bedtime and wake-up times. </p>
+                            </div>
+                            <div className='arr-last'>
+                                <p> Lack a consistent bedtime routine that promotes relaxation and signals the body for sleep. </p> 
+                            </div>
+                            <div className='arr-last'>
+                                <p> Face challenges in maintaining an ideal sleep environment due to factors like noise, light, or comfort issues. </p>
+                            </div>
+                            <div className='arr-last'>
+                                <p> Exhibit some sleep hygiene issues, such as occasional electronic device use or consumption of stimulating substances close to bedtime. </p>
+                            </div>
+                            <div className='arr-last'>
+                                <p> Experience moderate sleep disturbances or awakenings during the night, impacting sleep continuity. </p>
+                            </div>
+                            <div className='arr-last'>
+                                <p> Encounter daytime sleepiness or fatigue, although it may not be chronic or severely impairing. </p>
+                            </div>
                         </div>
                     </div>
-                    {/* <ul>
-                        <li>Open to trying new things </li>
-                        <li>Very creative</li>
-                        <li>Focused on tackling new challenges</li>
-                        <li>Happy to think about abstract concepts</li>
-                    </ul> */}
-                </div>
+                    :
+                    <>
+                        {
+                            result > 70 && result < 105 ? 
+                            <div className='charac-div' style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}> 
+                                <img src={starImg} />
+                                <h4>{Math.round((result / 135) * 100)} /  {100}</h4>
+                                <h1> Good Sleep Group</h1>
+                                <p> Users in this group have good sleep habits and generally experience restful sleep. They may have occasional sleep difficulties or mild disruptions, but their overall sleep quality is satisfactory. </p>
+                                <div className='arrs'>
+                                    <div className='arr-last'>
+                                        <p> Maintain a somewhat regular sleep schedule, although slight variations may occur. </p>
+                                    </div>
+                                    <div className='arr-last'>
+                                        <p> Follow a moderate bedtime routine that helps promote relaxation before sleep. </p> 
+                                    </div>
+                                    <div className='arr-last'>
+                                        <p> Create a reasonably comfortable sleep environment, but there may be minor improvements that could be made. </p>
+                                    </div>
+                                    <div className='arr-last'>
+                                        <p> Practice basic sleep hygiene habits, though there might be occasional lapses. </p>
+                                    </div>
+                                    <div className='arr-last'>
+                                        <p> Experience occasional sleep disturbances or awakenings during the night. </p>
+                                    </div>
+                                    <div className='arr-last'>
+                                        <p> Generally wake up feeling relatively refreshed, with a decent amount of energy during the daytime. </p>
+                                    </div>
+                                </div>
+                            </div> 
+                            :
+                            // 105-140
+                            <div className='charac-div' style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}> 
+                                <img src={starImg} />
+                                <h4>{Math.round((result / 135) * 100)} /  {100}</h4>
+                                <h1>Excellent Sleep Group</h1>
+                                <p> Users in this group exhibit excellent sleep habits and have a high quality of sleep. They experience minimal sleep difficulties and wake up feeling refreshed and well-rested.</p> 
+                                <div className='arrs'>
+                                    <div className='arr-last'>
+                                        <p> Consistently maintain a regular sleep schedule, going to bed and waking up at consistent times. </p>
+                                    </div>
+                                    <div className='arr-last'>
+                                        <p> Create a sleep-friendly environment, ensuring their sleep space is comfortable, dark, quiet, and at an optimal temperature. </p> 
+                                    </div>
+                                    <div className='arr-last'>
+                                        <p> Practice good sleep hygiene habits, such as avoiding stimulating activities or electronic devices close to bedtime. </p>
+                                    </div>
+                                    <div className='arr-last'>
+                                        <p> Experience minimal sleep disturbances and awakenings throughout the night. </p>
+                                    </div>
+                                    <div className='arr-last'>
+                                        <p> Wake up feeling refreshed, energized, and alert during the daytime. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </>
                 }
             </>
-            }
+        }
         </div>
 
         <div className='chrarc'>
-            
-            
-            {SubCategoryToAmountObject[0].value > 0 && SubCategoryToAmountObject[0].value < 50 ? 
-                <div className='charac-div'> 
-                    <img src={trophyImage} />
-                    <h1>Conscientiousness</h1>
-                    <p> You are quick on your feet, able to make snap decisions and act fast and effectively if needed. You are spontaneous and sometimes act impulsively.   </p>
-                
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p> Dislike structure and schedules </p>
-                        </div>
-                        <div className='arr-last'>
-                            <p> Engage in many different activities at once. </p>
-                        </div>
-                        <div className='arr-last'>
-                            <p> Move quickly from one thing to the next. </p>
-                        </div>
-                        <div className='arr-last'>
-                            <p> Can deliver bad news without it bringing you down. </p>
-                        </div>
+            {result > 0 && result < 35 ? 
+             <div className='charac-div' style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}> 
+                <img src={lampImg} />
+                <h1>Advices and Tips</h1>
+                <p> Advices to Improve Sleeping Habits and Quality of Life </p>
+                <div className='arrs'>
+                    <div className='arr-last'>
+                        <p> Establish a consistent sleep schedule, prioritizing regular bedtimes and wake-up times to regulate the sleep-wake cycle. </p>
                     </div>
-                </div>
-            :
-            <>
-                {SubCategoryToAmountObject[0].value > 50 && SubCategoryToAmountObject[0].value < 75 ?
-                    <div className='charac-div'> 
-                    <img src={trophyImage} />
-                    <h1>Conscientiousness</h1>
-                   <p>
-                        You see ahead and plan accordingly, you are able to achieve results through purposeful planning and persistence. You are perceived as an intelligent and reliable person by others. You are organized but not by nature, you put a great deal of work and thought to be able to do so.
-                    </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>Spends time preparing</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>You need a deadline to keep you on track</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Pays attention to detail</p>
-                        </div>
+                    <div className='arr-last'>
+                        <p> Develop a relaxing bedtime routine that incorporates activities like reading, taking a warm bath, or practicing relaxation exercises. </p> 
                     </div>
-                       
-                   </div>
-                   :
-                // Check if between 75-100
-                <div className='charac-div'>
-                    <img src={trophyImage} />
-                    <h1>Conscientiousness</h1>
-                    <p>
-                    You have a vision and plan ahead, you are able to achieve results through purposeful planning and persistence. You are perceived as an intelligent and reliable person by others. You are organized but not by nature, so you put a great deal of work to do so.
-                    </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>You think with your heart as much as you do with your head</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Spend time preparing</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Need a deadline to stay on track</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Pay attention to details</p>
-                        </div>
+                    <div className='arr-last'>
+                        <p> Create a sleep-friendly environment by addressing factors that may disrupt sleep, such as noise, light, temperature, or uncomfortable bedding. </p>
                     </div>
-                </div>
-                }
-            </>
-            }
-        </div>
+                    <div className='arr-last'>
+                        <p> Implement good sleep hygiene practices consistently, including limiting screen time before bed, avoiding stimulating substances, and creating a calm and dark bedroom environment. </p>
+                    </div>
+                    <div className='arr-last'>
+                        <p> Seek professional help to address underlying sleep disorders or medical conditions contributing to poor sleep quality. </p>
+                    </div>
+                    <div className='arr-last'>
+                        <p> Explore relaxation techniques, such as guided imagery, progressive muscle relaxation, or meditation, to promote relaxation and reduce sleep difficulties. </p>
+                    </div>
+                    <div className='arr-last'>
+                        <p> Limit or avoid caffeine and heavy meals close to bedtime, as they can interfere with sleep onset and quality. </p>
+                    </div>
+                    <div className='arr-last'>
+                        <p> Consider cognitive-behavioral therapy for insomnia (CBT-I), a therapeutic approach that targets sleep-related behaviors and thoughts, to improve sleep quality and address sleep difficulties. </p>
+                    </div>
+                    <div className='arr-last'>
+                        <p> Engage in stress management techniques, such as practicing stress-reduction exercises, seeking support, or addressing lifestyle factors contributing to stress and sleep disruptions. </p>
+                    </div>
 
-        <div className='chrarc'>
-            
-            {SubCategoryToAmountObject[1].value > 0 && SubCategoryToAmountObject[1].value < 50 ? 
-                <div className='charac-div'> 
-                    <img src={marketingImage} />
-                    <h1>Extraversion</h1>
-                    <p> 
-                    You like being on your own and prefer the company of yourself. Being surrounded by people exhausts you and drains your power. You avoid the spotlight and being on your own feels much better, you don’t need someone else around to have a good time.
-                    </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>Prefer solitude</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Do not enjoy making small talk</p>                            
-                        </div>
-                        <div className='arr-last'>
-                            <p>Carefully think things through before speaking</p>    
-                        </div>
-                        <div className='arr-last'>
-                            <p>Dislike being the center of attention</p>    
-                        </div>
-                    </div>
                 </div>
-            :
+            </div>
+            : 
             <>
-                {SubCategoryToAmountObject[1].value > 50 && SubCategoryToAmountObject[1].value < 75 ?
-                    <div className='charac-div'> 
-                        <img src={marketingImage} />
-                        <h1>Extraversion</h1>
-                       <p>
-                       You get your fill from being around people, it elevates your mood and performance. You are driven by interactions with people, which normally is the driving power of action. You like to be the center of attention and you gain energy from that. If you have a choice, you’d prefer doing everything with more than just yourself, the more the merrier.
-                        </p>
+                {
+                    result > 35 && result < 70 ?
+                    <div className='charac-div' style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}> 
+                        <img src={lampImg} />
+                        <h1>Advices and Tips</h1>
+                        <p> Advices to Improve Sleeping Habits and Quality of Life </p>
                         <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>Enjoy being the center of attention</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Like starting conversations</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Enjoy meeting new people</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Have a wide-range social circle of friends and acquaintances</p> 
+                            <div className='arr-last'> Establish a consistent sleep schedule, aiming for regular bedtimes and wake-up times to regulate the body's internal clock. </div>
+                            <div className='arr-last'> Create a calming bedtime routine that incorporates activities like reading, listening to relaxing music, or practicing gentle stretching. </div>
+                            <div className='arr-last'> Improve your sleep environment by addressing issues such as noise, light, temperature, or bedding comfort. </div>
+                            <div className='arr-last'> Practice good sleep hygiene habits consistently, including limiting screen time before bed and avoiding stimulating substances. </div>
+                            <div className='arr-last'> Implement strategies to manage and reduce sleep disturbances, such as using earplugs, white noise machines, or addressing any underlying medical conditions. </div>
+                            <div className='arr-last'> Address underlying causes of sleep difficulties, such as stress, anxiety, or lifestyle factors that may contribute to sleep disruptions. </div>
+                            <div className='arr-last'> Consider relaxation techniques or meditation before bed to promote a state of calmness and facilitate sleep onset. </div>
+                            <div className='arr-last'> Limit caffeine intake and avoid consuming heavy meals close to bedtime. </div>
+                            <div className='arr-last'> Seek professional guidance if experiencing persistent sleep issues that significantly impact daily functioning and well-being. </div>
                         </div>
                     </div>
-                   </div>
-                   :
-                // Check if between 75-100
-                <div className='charac-div'>
-                    <img src={marketingImage} />
-                    <h1>Extraversion</h1>   
-                    <p>
-                    You get your fill from being around people, it elevates your mood and performance. You are driven by interactions with people, which normally is the driving power of action. You like to be the center of attention but need some time to “cool down” alone later on. You enjoy large gatherings but can also enjoy a quiet night at home.
-                    </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>Enjoy being the center of attention</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Like starting conversations</p>    
-                        </div>
-                        <div className='arr-last'>
-                            <p>Enjoy meeting new people</p>    
-                        </div>
-                        <div className='arr-last'>
-                            <p>Have a wide-range social circle of friends and acquaintances</p>    
-                        </div>
-                    </div>
-                </div>
+                    :
+                    <>
+                        {
+                            result > 70 && result < 105 ? 
+                            <div className='charac-div' style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}> 
+                                <img src={lampImg} />
+                                <h1>Advices and Tips</h1>
+                                <p> Advices to Improve Sleeping Habits and Quality of Life </p>
+                                <div className='arrs'>
+                                   <div className='arr-last'> Establish a consistent sleep schedule to reinforce a more stable sleep pattern. </div>
+                                    <div className='arr-last'> Optimize your sleep environment by minimizing noise, improving bedding comfort, and adjusting room temperature to your preference. </div>
+                                    <div className='arr-last'> Minimize exposure to screens and stimulating activities before bed to facilitate better sleep onset. </div>
+                                    <div className='arr-last'> Practice relaxation techniques such as deep breathing, progressive muscle relaxation, or listening to calming music to enhance sleep quality. </div>
+                                    <div className='arr-last'> Avoid consuming caffeine or heavy meals close to bedtime, as they can interfere with sleep. </div>
+                                    <div className='arr-last'> Manage stress levels and adopt stress-reducing strategies, such as engaging in hobbies or practicing mindfulness. </div>
+                                    <div className='arr-last'> Incorporate regular physical exercise into your routine, aiming for at least 30 minutes of moderate-intensity activity most days of the week. </div>
+                                    <div className='arr-last'> Seek professional guidance if occasional sleep difficulties persist or impact your well-being. </div>
+                                </div>
+                            </div> 
+                            :
+                            // 105-140
+                            <div className='charac-div' style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}> 
+                                <img src={lampImg} />
+                                <h1>Advices and Tips</h1>
+                                <p> Advices to Improve Sleeping Habits and Quality of Life </p>
+                                <div className='arrs'>
+                                <div className='arr-last'> Maintain a consistent sleep schedule, even on weekends, to reinforce a healthy sleep-wake rhythm. </div>
+                                    <div className='arr-last'> Establish a relaxing bedtime routine that includes activities like reading, gentle stretching, or taking a warm bath. </div>
+                                    <div className='arr-last'> Ensure your sleep environment is conducive to quality rest by minimizing noise, light, and distractions. </div>
+                                    <div className='arr-last'> Practice good sleep hygiene by avoiding caffeine, nicotine, and heavy meals close to bedtime. </div>
+                                    <div className='arr-last'> Engage in regular physical exercise during the day, which can promote better sleep. </div>
+                                    <div className='arr-last'> Manage stress levels effectively through techniques such as relaxation exercises, meditation, or journaling. </div>
+                                    <div className='arr-last'> Seek professional help if experiencing persistent sleep issues that impact daily functioning. </div>
+                                </div>
+                            </div>
+                        }
+                    </>
                 }
             </>
-            }
+        }
         </div>
-
-        <div className='chrarc'>
-            
-            {SubCategoryToAmountObject[2].value > 0 && SubCategoryToAmountObject[2].value < 50 ? 
-                <div className='charac-div'> 
-                    <img src={forumImage} />
-                    <h1>Agreeableness</h1>
-                    <p> 
-                        You care for yourself first. You care more for a job getting done than for popularity. You are tough and resilient and able to make absolute objective decisions and deal with the consequences they bring. You are competitive and appreciate no 'messing around'.
-                    </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>Consider yourself first</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Speak their truth</p>     
-                        </div>
-                        <div className='arr-last'>
-                            <p>Don't consider unrelated things to the task at hand</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Manipulate others to get what you want</p>    
-                        </div>
-                    </div>
-                </div>
-            :
-                // Check if between 50-100
-                <div className='charac-div'>
-                    <img src={forumImage} />
-                    <h1>Agreeableness</h1>
-                    <p>
-                    You really care about people and their feelings, for that, you are willing to work hard to please people, and people see you as friendly, honest, generous, helpful, and overall, a decent human being. You could even compromise your own interest for the sake of getting along better with people. You are optimistic when considering other people and they perceive you as trustworthy. 
-                    </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>Have a great deal of interest in other people</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Care about others</p>    
-                        </div>
-                        <div className='arr-last'>
-                            <p>Feel empathy and concern for other people</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Enjoy helping and contributing to the happiness of others</p>    
-                        </div>
-                        <div className='arr-last'>
-                            <p>Assist others who require help</p>
-                        </div>
-                    </div>
-                </div>
-                }
         </div>
-
-        <div className='chrarc'>
-            
-            {SubCategoryToAmountObject[3].value > 0 && SubCategoryToAmountObject[3].value < 50 ? 
-                <div className='charac-div'> 
-                    <img src={leadImage} />
-                    <h1>Neuroticism</h1>
-                    <p> 
-                    You don’t like uncertainty. it can negatively change your mood. You are very aware of your surroundings and can detect small changes in people’s behavior. You are very observant when it comes to speech and other non-verbal interactions between people or towards you.
-                    </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>Experience high levels of stress</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Feel anxious</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Highly aware of your surroundings</p>    
-                        </div>
-                    </div>
-                </div>
-            :
-                // Check if between 50-100
-                <div className='charac-div'>
-                    <img src={leadImage} />
-                    <h1>Neuroticism</h1>
-                    <p>
-                    You are confident and emotionally stable. You can evaluate complex and stressful situations in a calm and distinguished deminer. You are not easily threatened, and it is not easy to get you upset. You can cope with pressure with valor and ease. You’re the one to be next to in times of crisis. 
-                    </p>
-                    <div className='arrs'>
-                        <div className='arr-last'>
-                            <p>Emotionally stable</p>
-                        </div>
-                        <div className='arr-last'>
-                            <p>Deal well with stress</p>    
-                        </div>
-                        <div className='arr-last'>
-                            <p>Rarely feel sad or depressed</p>    
-                        </div>
-                        <div className='arr-last'>
-                            <p>Don't worry much</p>    
-                        </div>
-                        <div className='arr-last'>
-                            <p>Very relaxed</p>
-                        </div>
-                    </div>
-                </div>
-                }
-        </div>
-    </div>
     </>
-  )
+    )
 }
 
 export default FiveCharacResults;

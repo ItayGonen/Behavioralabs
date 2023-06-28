@@ -1,7 +1,7 @@
 import React from 'react';
 import { globalStyles } from '../../styles';
 import './Footer.css';
-import logoSvgImg from '../../assets/sleep_logo_for_footer.svg';
+import logoSvgImg from '../../assets/regular-logo-for-footer.svg';
 
 const Footer = () => {
   return (

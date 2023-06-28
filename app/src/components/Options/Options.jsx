@@ -35,19 +35,19 @@ const Options = (props) => {
 
     const optionsForSleepTest = [
         {
-            id: 1,
+            id: 4,
             text: "Always"
         },
         {
-            id: 2,
+            id: 3,
             text: "Frequently"
         },
         {
-            id: 3,
+            id: 2,
             text: "Occasionally"
         },
         {
-            id: 4,
+            id: 1,
             text: "Rarely or never"
         }
     ]

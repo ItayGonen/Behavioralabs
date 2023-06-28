@@ -13,8 +13,8 @@
 }
 
 .charac-div {
-    background: rgb(92,24,191);
-    background: linear-gradient(90deg, rgba(92,24,191,1) 0%, rgba(172,140,219,1) 100%, rgba(250,249,246,1) 100%);
+    /* background: rgb(92,24,191);
+    background: linear-gradient(90deg, rgba(92,24,191,1) 0%, rgba(172,140,219,1) 100%, rgba(250,249,246,1) 100%); */
     color: white;
     padding: 50px;
     z-index: 1;
@@ -29,7 +29,7 @@
 
 .charac-div p {
     font-size: 1rem;
-    text-align: center;
+    text-align: center !important;
 }
 
 .charac-div h1 {
@@ -40,7 +40,7 @@
 .arrs {
     display: grid;
     grid-template-columns: 50% 50%;
-    
+    /* width: 90%; */
 }
 
 .arr-last {
@@ -68,8 +68,13 @@
     .charac-div {
         width: 120%;
     }
+
+    .charac-div h1 {
+        text-align: center;
+    }
     .arrs {
         grid-template-columns: auto;
+        width: 115%;
     }
     .arr-last {
         margin: 5%;

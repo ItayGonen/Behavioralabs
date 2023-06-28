@@ -253,6 +253,7 @@
 
 .report-item {
     position: relative;
+    height: 900px;
 }
 
 .down-to-results {

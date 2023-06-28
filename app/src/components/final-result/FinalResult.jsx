@@ -6,6 +6,7 @@ import ProgressResults from '../../components/ProgressResults/ProgressResults';
 import cImage from '../../assets/pho2.png';
 import Footer from '../../components/Footer/Footer';
 import { userFinishPayment } from '../../redux/paymentRedux';
+import Circuclar from '../Circuclar/Circuclar';
 
 const FinalResult = () => {
     const result = useSelector(state => state.payment.result);
@@ -24,7 +25,7 @@ const FinalResult = () => {
   return (
     <>
     <div className='outer-payment-results-container'>
-        <h1 style={{ padding: '300px' }}> Your Result is {result} </h1>
+        <FiveCharacResults />
     </div>
     <Footer />
     </>

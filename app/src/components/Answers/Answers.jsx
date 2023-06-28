@@ -105,7 +105,7 @@ const Answers = (props) => {
             
             <div className='report-item' id="master-report" style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}>
                 <div className='level'>
-                    <p style={{ color: 'white' }}> Complete Personality Report </p>
+                    <p style={{ color: 'white' }}> {globalTexts.FirstReportPackageName} </p>
                 </div>
                 <div className='price'>
                     <p> {globalTexts.FirstReportPrice} </p>
@@ -128,7 +128,7 @@ const Answers = (props) => {
                     </div> */}
                 </div>
                 <a
-                    href="/final-result/123"
+                    href={globalTexts.LinkToPaymentBasicPackage}
                     className="to-payment-button"
                     style={{ color: globalStyles.ButtonsHeaderColor }}
                 > Get My Results </a>
@@ -136,7 +136,7 @@ const Answers = (props) => {
 
             <div className='report-item' id="master-report" style={{ background: globalStyles.LoadingBeforeQuiz.first, background: `linear-gradient(90deg, ${globalStyles.LoadingBeforeQuiz.first} 0%, ${globalStyles.LoadingBeforeQuiz.second} 100%, ${globalStyles.StepsBeforeBackgroundColor.third} 100%)` }}>
                 <div className='level'>
-                    <p style={{ color: 'white' }}> Advanced Personality Report </p>
+                    <p style={{ color: 'white' }}> {globalTexts.SecondReportPackageName} </p>
                 </div>
                 <div className='price'>
                     <p> {globalTexts.SecondReportPrice} </p>
@@ -160,7 +160,7 @@ const Answers = (props) => {
                     <hr />
                 </div>
                 <a
-                    href="/final-result/123"
+                    href={globalTexts.LinkToPaymentAdvancedPackage}
                     className="to-payment-button"
                     style={{ color: globalStyles.ButtonsHeaderColor }}
                 > Get My Results </a>
