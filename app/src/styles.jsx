@@ -42,7 +42,7 @@ export const globalStyles = {
 
 
 export const globalTexts = {
-    MainTitleInTheHeader: "Discover Your Sleep Type and Transform Your Sleep Habits!",
+    MainTitleInTheHeader: "Discover Your Sleep Type!",
     SecondryTitleInTheHeader: "Start the Sleep Test Today and Uncover the Secrets to Restful Nights and Energized Days",
     BallsText: [
         {

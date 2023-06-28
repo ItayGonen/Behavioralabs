@@ -11,16 +11,15 @@ import Circuclar from '../Circuclar/Circuclar';
 const FinalResult = () => {
     const result = useSelector(state => state.payment.result);
 
-    // For Production 
-    //useEffect(() => {
-    //     SubCategoryToAmountObject.map((name, value) => {
-    //         if (name.value != null){
-    //             dispatch(userFinishPayment())
-    //         } else {
-    //             window.location.replace("/")
-    //         }
-    //     })
-    // }, [])
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+          if (result){
+                dispatch(userFinishPayment())
+            } else {
+                window.location.replace("/")
+            }
+    }, [])
 
   return (
     <>

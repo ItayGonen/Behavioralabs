@@ -88,6 +88,11 @@ const Answers = (props) => {
         calculate()
     }, [])
 
+
+    const getsResultsHandler = () => {
+        dispatch(userMovedToPayment())
+    }
+
   return ( 
     <>
     <div className='results-container'>
@@ -130,6 +135,7 @@ const Answers = (props) => {
                 <a
                     href={globalTexts.LinkToPaymentBasicPackage}
                     className="to-payment-button"
+                    onClick={getsResultsHandler}
                     style={{ color: globalStyles.ButtonsHeaderColor }}
                 > Get My Results </a>
             </div>
@@ -162,6 +168,7 @@ const Answers = (props) => {
                 <a
                     href={globalTexts.LinkToPaymentAdvancedPackage}
                     className="to-payment-button"
+                    onClick={getsResultsHandler}
                     style={{ color: globalStyles.ButtonsHeaderColor }}
                 > Get My Results </a>
             </div>

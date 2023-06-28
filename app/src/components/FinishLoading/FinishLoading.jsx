@@ -56,7 +56,7 @@ const FinishLoading = (props) => {
         }
       };
 
-      const FinishLoadingSentences = globalTexts.LoadingSentences;
+      const FinishLoadingSentences = globalTexts.LoadingSentences;  
 
 
   return (
