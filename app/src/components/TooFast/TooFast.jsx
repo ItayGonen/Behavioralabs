@@ -8,7 +8,7 @@ const TooFast = () => {
     const [width, setWidth] = useState(window.innerWidth)
 
     useEffect(() => {
-        console.log(width)
+        // console.log(width)
         const handleResize = () => setWidth(window.innerWidth);
         window.addEventListener("resize", handleResize)
 

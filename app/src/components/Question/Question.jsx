@@ -23,8 +23,10 @@ const Question = (props) => {
 
   return (
     <>
+    <div className='question-texts-div'>
         <p className='questions-number-from' style={{  color: globalStyles.ChapterColors}}> Chapter <span className='span-from-number' style={{  color: globalStyles.ChapterColors}}> {currentChapter} </span> / {numberOfChapters}</p>
         <p className='question-text'>{props.question.name}</p>
+    </div>
     </>
     
   )

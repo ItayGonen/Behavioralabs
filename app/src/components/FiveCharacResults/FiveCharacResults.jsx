@@ -18,6 +18,8 @@ const FiveCharacResults = () => {
     const result = useSelector(state => state.payment.result);
 
 
+
+
   return (
     <>
     <div className='characts'>

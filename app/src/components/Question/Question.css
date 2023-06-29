@@ -1,14 +1,25 @@
+.question-texts-div {
+    height: 100%;
+    padding: 30px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
 
 .questions-number-from {
-    position: absolute;
-    top: 15%;
+    /* position: absolute;
+    top: 10%; */
     font-size: 1rem;
     font-weight: 500;
 }
 
 .question-text {
-    position: absolute;
-    top: 45%;
+    /* position: absolute;
+    top: 45%; */
     font-size: 2.25rem;
     font-weight: 500;
     /* transition: all 2s; */
@@ -27,6 +38,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .question-texts-div {
+        width: 100% !important;
+    }
     .questions-number-from {    
         font-size: 0.8rem;
     }

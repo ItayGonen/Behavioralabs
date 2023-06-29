@@ -93,6 +93,13 @@ const Answers = (props) => {
         dispatch(userMovedToPayment())
     }
 
+    const result = useSelector(state => state.payment.result);
+
+    useEffect(() => {
+        console.log(Math.round((result / 35) * 25))
+        console.log("RESULT:" + result)
+    }, [result])
+
   return ( 
     <>
     <div className='results-container'>
